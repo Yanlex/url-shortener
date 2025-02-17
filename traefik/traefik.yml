@@ -1,0 +1,12 @@
+entryPoints:
+  web:
+    address: ":80"
+
+providers:
+  file:
+    filename: "/etc/traefik/rules.yml"
+    watch: true
+
+api:
+  dashboard: true
+  insecure: true

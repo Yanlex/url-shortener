@@ -1,0 +1,15 @@
+# http routing section
+http:
+  routers:
+    go-backend:
+      rule: "Host(`app.localhost`)"
+      service: backend
+
+  services:
+    backend:
+      loadBalancer:
+        servers:
+          - url: http://172.21.0.1:9462
+
+# - url: http://172.21.0.1:9462
+
